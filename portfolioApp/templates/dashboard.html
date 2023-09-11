@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<section class="px-4">
+<div class="logout my-3 text-end">
+<a href="{% url 'logout' %}" class="btn btn-sm py-0 px-2 text-light" style="font-size:12px;background:gray;">LOG OUT</a>
+</div>
+<!-- row starts -->
+<div class="row pt-2 pb-5">
+
+<div class="col-sm-12">
+<div class="dcard my-2 p-2  text-end bg-white"style="min-height:100px;">
+<a href="{% url 'logout' %}" class="btn btn-sm py-0 px-3 text-light" style="font-size:12px;">Credentials</a> 
+<hr class="mt-2">
+</div>
+</div>
+
+
+<div class="col-sm-2">
+<div class="dcard my-2 p-2 bg-white">
+<h6 class="pt-0"><b>Attendence</b></h6> 
+<hr class="mt-2">
+<div class="content text-center">
+<div class="progress mb-3 mx-2">
+  <div class="progress-bar" role="progressbar" style="width: 25%;background:#EB46D7;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+</div>
+<p class="my-1 text-secondary">Assigned  <span class="mx-2 text-secondary">9</span></p>
+<p class="my-1 text-secondary">No show  <span class="mx-2 text-secondary">0</span></p>
+<p class="my-1 text-secondary">Cancelled  <span class="mx-2 text-secondary">0</span></p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="dcard my-2 p-2 bg-white">
+<div class="header d-flex justify-content-between">
+<h6 class="py-0 px-0"><b>Schedule at a Glance</b></h6> 
+<div class="button">
+<a href="{% url 'dashboard' %}" class="btn btn-sm py-0 px-3 text-light" style="font-size:12px;">Manage Schedule</a> 
+</div>
+</div>
+<hr class="mt-2">
+<div class="content d-flex justify-content-around">
+<div class="box text-center">
+<h5><b>4</b></h5>
+<p>Upcoming Shifts</p>
+</div>
+<div class="box text-center">
+<h5><b>5</b></h5>
+<p>Upcoming Shifts</p>
+</div>
+<div class="box text-center">
+<h5><b>6</b></h5>
+<p>Upcoming Shifts</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-sm-4">
+<div class="dcard my-2 p-2 bg-white">
+<div class="header d-flex justify-content-between">
+<h6 class="py-0 px-0"><b>Earning Report</b></h6> 
+<div class="button">
+<a href="{% url 'dashboard' %}" class="btn btn-sm py-0 px-3 text-light" style="font-size:12px;">View Report</a> 
+</div>
+</div>
+<hr class="mt-2">
+<div class="content d-flex justify-content-between">
+<div class="box text-between">
+<p class="text-dark">Shift Worked:  <span class="mx-2 text-secondary">9</span></p>
+<p class="text-dark">Hour Worked:  <span class="mx-2 text-secondary">0</span></p>
+<p class="text-dark">Amount Paid:  <span class="mx-2 text-secondary">$0.00</span></p>
+<p class="text-dark">Processing:  <span class="mx-2 text-secondary">$0.00</span></p>
+</div>
+<div class="box text-end">
+<h5>$40.4</h5>
+<p>Total Earning</p>
+<p style="font-size:10px;color:gray;">Last Two Weeks</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-sm-2">
+<div class="dcard my-2 p-2 bg-white"style="position:relative;">
+<h6 class="pt-0"><b>Texts</b></h6> 
+<hr class="mt-2">
+<div class="content text-center">
+<p>You are currently enrolled</p>
+<a href="" class="btn btn-sm text-light py-1 px-3" style="position:absolute;bottom:10px;left:35px;border-radius:50px;"><i class="fas fa-cog"></i> Settings</a>
+</div>
+</div>
+</div>
+
+<div class="col-sm-12">
+<div class="dcard my-2 p-2  text-end bg-white"style="min-height:100px;">
+<div class="header d-flex justify-content-between">
+<h6 class="py-0 px-0"><b>Your Upcoming Shifts</b></h6> 
+<div class="button">
+<a href="{% url 'dashboard' %}" class="btn btn-sm py-0 px-3 text-light" style="font-size:12px;">View Schedule</a> 
+</div>
+</div>
+<hr class="mt-2">
+<div class="table px-0 table-responsive"style="font-size:11px;">
+<table class="table ">
+<tbody class="text-start text-secondary">
+<tr class="text-dark">
+<th scope="col" style="width:10%"><b>Shift Date <i class="fas fa-arrow-up"></i> </b></th>
+<th scope="col" style="width:10%"><b>Shift Time </b></th>
+<th scope="col" style="width:55%"><b>Facility </b></th>
+<th scope="col" style="width:25%"><b>Notes </b></th>
+</tr>
+
+<tr>
+<td>12-05-2021</td>
+<td>10:10 PM</td>
+<td>Facilities content will be displayed here.</td>
+<td>Note will be displayed here.</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+
+<div class="col-sm-12">
+<div class="dcard my-2 p-2  text-end bg-white"style="min-height:100px;">
+<div class="header d-flex justify-content-between">
+<h6 class="py-0 px-0"><b>Shifts Needing a Work Log</b></h6> 
+<div class="button">
+<a href="{% url 'dashboard' %}" class="btn btn-sm py-0 px-3 text-light" style="font-size:12px;">View Schedule</a> 
+</div>
+</div>
+<hr class="mt-2">
+<div class="table px-0 table-responsive"style="font-size:11px;">
+<table class="table ">
+<tbody class="text-start text-secondary">
+<tr class="text-dark">
+<th scope="col" style="width:10%"><b>Shift Date <i class="fas fa-arrow-up"></i> </b></th>
+<th scope="col" style="width:10%"><b>Shift Time </b></th>
+<th scope="col" style="width:55%"><b>Facility </b></th>
+<th scope="col" style="width:25%"><b>Notes </b></th>
+</tr>
+
+<tr>
+<td>12-05-2021</td>
+<td>10:10 PM</td>
+<td>Facilities content will be displayed here.</td>
+<td>Note will be displayed here.</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+
+
+</div>
+<!-- row Ends -->
+
+
+</section>
+{% endblock body %}
